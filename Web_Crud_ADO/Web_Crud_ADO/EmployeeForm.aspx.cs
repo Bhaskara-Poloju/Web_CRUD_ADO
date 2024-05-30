@@ -29,5 +29,11 @@ namespace Web_Crud_ADO
                 Employee_Grid.DataBind();
             }
         }
+        
+        //Add Employee Record -- POST
+        private void AddEmployeeRecord()
+        {
+            //In progress
+        }
     }
 }
