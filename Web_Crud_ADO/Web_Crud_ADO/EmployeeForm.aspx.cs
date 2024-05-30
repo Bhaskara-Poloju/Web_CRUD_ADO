@@ -36,5 +36,11 @@ namespace Web_Crud_ADO
         {
             //Work in progress
         }
+        
+        //Add Employee Record -- POST
+        private void AddEmployeeRecord()
+        {
+            //In progress
+        }
     }
 }
