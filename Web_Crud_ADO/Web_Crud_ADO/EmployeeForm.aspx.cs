@@ -42,5 +42,12 @@ namespace Web_Crud_ADO
         {
             //In progress
         }
+
+
+        //Delete record
+        private void DeleteEmployee()
+        {
+            //In progress..
+        }
     }
 }
