@@ -18,6 +18,7 @@ namespace Web_Crud_ADO
             GetEmployeeData();
         }
 
+        //Get Employee Data from DB
         private void GetEmployeeData()
         {
             using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-J1A95C0\SQLEXPRESS;Initial Catalog=HRDB;Persist Security Info=True;User ID=sa;Password=Srirama@18"))
@@ -28,6 +29,12 @@ namespace Web_Crud_ADO
                 Employee_Grid.DataSource = ds;
                 Employee_Grid.DataBind();
             }
+        }
+
+        //Update Employee Data
+        private void UpdateEmployeeData()
+        {
+            //Work in progress
         }
     }
 }
