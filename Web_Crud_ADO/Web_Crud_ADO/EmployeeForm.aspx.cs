@@ -1,7 +1,10 @@
-﻿using System;
+﻿using ConsoleApp_OOPs.OOPs;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+//using System.Data;
+//using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,6 +19,17 @@ namespace Web_Crud_ADO
         {
             //klkljflasjflkjas
             GetEmployeeData();
+        }
+
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-J1A95C0\SQLEXPRESS;Initial Catalog=HRDB;Persist Security Info=True;User ID=sa;Password=Srirama@18");
+
+            SqlCommand cmd = new SqlCommand("INSERT INTO dbo.employees (first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES('" + txt_firstName.Text + "','" + txt_lastName.Text + "','" + txt_Email.Text + "','" + txt_phoneNumber.Text + "','" + txt_hireDate.Text + "','" + txt_jobId.Text + "','" + txt_salary.Text + "','"+txt_managerId.Text+"','"+txt_deptId.Text+"')", cn);
+
+            cn.Open();
+            cmd.ExecuteNonQuery();
+            cn.Close();
         }
 
         //Get Employee Data from DB
@@ -36,7 +50,7 @@ namespace Web_Crud_ADO
         {
             //Work in progress
         }
-        
+
         //Add Employee Record -- POST
         private void AddEmployeeRecord()
         {

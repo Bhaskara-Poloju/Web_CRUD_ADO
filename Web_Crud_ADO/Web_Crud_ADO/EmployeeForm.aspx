@@ -69,13 +69,15 @@
                 </td>
             </tr>
             <tr>
-                <td></td><td></td>
-            </tr>
-            <tr>
-                <td></td><td></td>
-            </tr>
-            <tr>
                 <td>
+                    <asp:Button ID="btn_Insert" runat="server" Text="INSERT" OnClick="btnInsert_Click" />
+                </td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td>
+            </tr>
+            <tr>
+                <td colspan="2">
                     <asp:GridView ID="Employee_Grid" runat="server">
                     </asp:GridView>
                 </td><td></td>
